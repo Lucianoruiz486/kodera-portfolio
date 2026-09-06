@@ -245,7 +245,7 @@ section h2 {
    ============================================ */
 .proyectos-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 24px;
 }
 
@@ -279,6 +279,20 @@ section h2 {
   color: var(--texto-secundario);
   font-size: 14px;
   padding: 0 20px 20px;
+}
+
+.card-link {
+  display: block;
+  color: var(--dorado);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 20px 20px;
+  margin-top: -12px;
+  transition: color 0.2s ease;
+}
+
+.card-link:hover {
+  color: var(--dorado-hover);
 }
 
 /* ============================================
