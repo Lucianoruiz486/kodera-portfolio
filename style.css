@@ -1,0 +1,370 @@
+/* ============================================
+   VARIABLES DE COLOR (paleta Kodera)
+   ============================================ */
+:root {
+  --negro: #0A0E1A;
+  --azul-marino: #0F1C3F;
+  --azul-marino-claro: #16264F;
+  --borde: #1E2D52;
+  --dorado: #D4AF37;
+  --dorado-hover: #E5C158;
+  --texto-principal: #F5F5F5;
+  --texto-secundario: #8A94A6;
+}
+
+/* ============================================
+   RESET BÁSICO
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--negro);
+  color: var(--texto-principal);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ============================================
+   BOTONES
+   ============================================ */
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 15px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--dorado);
+  color: var(--negro);
+}
+
+.btn-primary:hover {
+  background-color: var(--dorado-hover);
+  transform: translateY(-2px);
+}
+
+.btn-small {
+  padding: 8px 20px;
+  font-size: 14px;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--texto-principal);
+  border: 1px solid var(--borde);
+}
+
+.btn-secondary:hover {
+  border-color: var(--dorado);
+  color: var(--dorado);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   HEADER / NAV
+   ============================================ */
+.header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(10, 14, 26, 0.9);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  border-bottom: 1px solid var(--borde);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--dorado);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-size: 15px;
+  color: var(--texto-secundario);
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--texto-principal);
+}
+
+/* Botón hamburguesa (oculto en desktop) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 26px;
+  height: 2px;
+  background-color: var(--texto-principal);
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  padding: 120px 0 100px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.eyebrow {
+  color: var(--dorado);
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  color: var(--texto-secundario);
+  font-size: 17px;
+  margin-bottom: 32px;
+}
+
+/* ============================================
+   SECCIONES GENERALES
+   ============================================ */
+section {
+  padding: 90px 0;
+}
+
+section h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--texto-secundario);
+  margin-bottom: 48px;
+  font-size: 16px;
+}
+
+/* ============================================
+   SERVICIOS
+   ============================================ */
+.servicios {
+  background-color: var(--azul-marino);
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card-servicio {
+  background-color: var(--azul-marino-claro);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 32px 24px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card-servicio:hover {
+  transform: translateY(-4px);
+  border-color: var(--dorado);
+}
+
+.card-servicio h3 {
+  color: var(--dorado);
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.card-servicio p {
+  color: var(--texto-secundario);
+  font-size: 15px;
+}
+
+/* ============================================
+   PROYECTOS
+   ============================================ */
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card-proyecto {
+  background-color: var(--azul-marino);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.card-proyecto:hover {
+  transform: translateY(-4px);
+}
+
+.card-proyecto-img {
+  height: 160px;
+  background-color: var(--azul-marino-claro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.card-proyecto h3 {
+  font-size: 17px;
+  padding: 20px 20px 8px;
+}
+
+.card-proyecto p {
+  color: var(--texto-secundario);
+  font-size: 14px;
+  padding: 0 20px 20px;
+}
+
+/* ============================================
+   SOBRE MÍ
+   ============================================ */
+.sobre-mi-content {
+  max-width: 700px;
+  text-align: center;
+}
+
+.sobre-mi-content p {
+  color: var(--texto-secundario);
+  font-size: 17px;
+}
+
+/* ============================================
+   CONTACTO
+   ============================================ */
+.contacto {
+  background-color: var(--azul-marino);
+  text-align: center;
+}
+
+.contacto-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contacto-botones {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  padding: 32px 0;
+  text-align: center;
+  color: var(--texto-secundario);
+  font-size: 14px;
+  border-top: 1px solid var(--borde);
+}
+
+/* ============================================
+   RESPONSIVE (celular y tablet)
+   ============================================ */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background-color: var(--negro);
+    flex-direction: column;
+    padding: 24px;
+    gap: 20px;
+    border-bottom: 1px solid var(--borde);
+    transform: translateY(-150%);
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero {
+    padding: 80px 0 60px;
+  }
+
+  .servicios-grid,
+  .proyectos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+}
