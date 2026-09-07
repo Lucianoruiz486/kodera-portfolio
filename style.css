@@ -296,6 +296,43 @@ section h2 {
 }
 
 /* ============================================
+   FORMACIÓN
+   ============================================ */
+.certificado-card {
+  max-width: 640px;
+  margin: 0 auto;
+  background-color: var(--azul-marino);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.certificado-icono {
+  font-size: 40px;
+  flex-shrink: 0;
+}
+
+.certificado-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.certificado-info h3 {
+  color: var(--dorado);
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.certificado-info p {
+  color: var(--texto-secundario);
+  font-size: 14px;
+}
+
+/* ============================================
    SOBRE MÍ
    ============================================ */
 .sobre-mi-content {
